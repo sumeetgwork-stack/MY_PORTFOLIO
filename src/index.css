@@ -92,7 +92,7 @@ main { position: relative; z-index: 1; }
 
 /* ---------- Top Navbar ---------- */
 .top-navbar {
-  position: static;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -102,7 +102,10 @@ main { position: relative; z-index: 1; }
   justify-content: space-between;
   padding: 0 48px;
   height: 64px;
-  background: transparent;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--nav-border);
   transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -242,10 +245,10 @@ section { padding: var(--section-padding); position: relative; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: calc(100vh - 64px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 100px;
 }
 
 .hero-content { max-width: 800px; }
@@ -544,7 +547,7 @@ section { padding: var(--section-padding); position: relative; }
 
 .back-link:hover { color: var(--accent-text); border-color: var(--accent); }
 
-.projects-page-header { text-align: center; padding-top: 40px; padding-bottom: 0; position: relative; z-index: 2; }
+.projects-page-header { text-align: center; padding-top: 120px; padding-bottom: 0; position: relative; z-index: 2; }
 
 /* Cylinder layout — full viewport, no scroll needed */
 .cylinder-layout {
@@ -802,7 +805,7 @@ section { padding: var(--section-padding); position: relative; }
   .cylinder-face-emoji { font-size: 1.6rem; }
   .project-detail-panel { padding: 24px; margin-left: 0; max-height: none; }
   .projects-back { top: 80px; left: 50%; transform: translateX(-50%); }
-  .projects-page-header { padding-top: 20px; }
+  .projects-page-header { padding-top: 130px; }
   .cylinder-layout { padding: 0 16px; }
 }
 
