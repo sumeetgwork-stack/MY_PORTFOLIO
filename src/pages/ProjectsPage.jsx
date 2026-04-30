@@ -58,12 +58,6 @@ const CylinderCarousel = ({ onSelect, selectedId, rotation }) => {
 
   return (
     <div className="cylinder-viewport">
-      <img 
-        src="/project-hand.png" 
-        alt="Sumeet's Hand" 
-        className="cylinder-hand-bg" 
-        onError={(e) => { e.target.style.display = 'none'; }}
-      />
       <div
         className="cylinder-track"
         style={{ transform: `rotateX(-5deg) rotateY(${rotation}deg)` }}
