@@ -242,10 +242,10 @@ section { padding: var(--section-padding); position: relative; }
 
 /* ---------- Hero ---------- */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .hero-content { max-width: 800px; }
@@ -544,7 +544,7 @@ section { padding: var(--section-padding); position: relative; }
 
 .back-link:hover { color: var(--accent-text); border-color: var(--accent); }
 
-.projects-page-header { text-align: center; padding-top: 100px; padding-bottom: 0; position: relative; z-index: 2; }
+.projects-page-header { text-align: center; padding-top: 40px; padding-bottom: 0; position: relative; z-index: 2; }
 
 /* Cylinder layout — full viewport, no scroll needed */
 .cylinder-layout {
@@ -802,7 +802,7 @@ section { padding: var(--section-padding); position: relative; }
   .cylinder-face-emoji { font-size: 1.6rem; }
   .project-detail-panel { padding: 24px; margin-left: 0; max-height: none; }
   .projects-back { top: 80px; left: 50%; transform: translateX(-50%); }
-  .projects-page-header { padding-top: 140px; }
+  .projects-page-header { padding-top: 20px; }
   .cylinder-layout { padding: 0 16px; }
 }
 
