@@ -801,7 +801,8 @@ section { padding: var(--section-padding); position: relative; }
   .cylinder-face-title { font-size: 0.95rem; }
   .cylinder-face-emoji { font-size: 1.6rem; }
   .project-detail-panel { padding: 24px; margin-left: 0; max-height: none; }
-  .projects-back { top: 70px; left: 16px; }
+  .projects-back { top: 80px; left: 50%; transform: translateX(-50%); }
+  .projects-page-header { padding-top: 140px; }
   .cylinder-layout { padding: 0 16px; }
 }
 
