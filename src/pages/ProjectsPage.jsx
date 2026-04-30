@@ -251,19 +251,6 @@ const ProjectsPage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Back */}
-      <motion.div
-        className="projects-back"
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.3 }}
-      >
-        <Link to="/" className="back-link">
-          <HiArrowLeft />
-          <span>Home</span>
-        </Link>
-      </motion.div>
-
       {/* Header — just title, no labels */}
       <motion.div
         className="projects-page-header"
