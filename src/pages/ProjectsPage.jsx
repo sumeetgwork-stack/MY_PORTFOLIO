@@ -201,6 +201,53 @@ const ProjectsPage = () => {
     return () => window.removeEventListener('wheel', handleWheel)
   }, [])
 
+  // Touch handlers for mobile swiping
+  const touchStartY = useRef(null)
+  const touchStartX = useRef(null)
+
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      touchStartY.current = e.touches[0].clientY
+      touchStartX.current = e.touches[0].clientX
+    }
+
+    const handleTouchEnd = (e) => {
+      if (isLocked.current || touchStartY.current === null || touchStartX.current === null) return
+
+      const touchEndY = e.changedTouches[0].clientY
+      const touchEndX = e.changedTouches[0].clientX
+
+      const deltaY = touchStartY.current - touchEndY
+      const deltaX = touchStartX.current - touchEndX
+
+      const step = 360 / projects.length
+
+      // Detect if the swipe is significant enough
+      if (Math.abs(deltaY) > Math.abs(deltaX)) {
+        // Vertical swipe (Up/Down)
+        if (Math.abs(deltaY) > 40) {
+          setRotation((prev) => prev - Math.sign(deltaY) * step)
+        }
+      } else {
+        // Horizontal swipe (Left/Right)
+        if (Math.abs(deltaX) > 40) {
+          setRotation((prev) => prev - Math.sign(deltaX) * step)
+        }
+      }
+
+      touchStartY.current = null
+      touchStartX.current = null
+    }
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: true })
+    window.addEventListener('touchend', handleTouchEnd, { passive: true })
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchend', handleTouchEnd)
+    }
+  }, [])
+
   return (
     <motion.div
       className="projects-page"
