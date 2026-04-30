@@ -16,21 +16,23 @@ import BackgroundAnimation from './components/BackgroundAnimation'
 export const ThemeContext = createContext()
 export const useTheme = () => useContext(ThemeContext)
 
+import Reveal from './components/Reveal'
+
 function HomePage() {
   return (
     <>
       <main>
         <Hero />
         <div className="section-divider" />
-        <About />
+        <Reveal><About /></Reveal>
         <div className="section-divider" />
-        <Skills />
+        <Reveal><Skills /></Reveal>
         <div className="section-divider" />
-        <Education />
+        <Reveal><Education /></Reveal>
         <div className="section-divider" />
-        <Certifications />
+        <Reveal><Certifications /></Reveal>
         <div className="section-divider" />
-        <Contact />
+        <Reveal><Contact /></Reveal>
       </main>
       <Footer />
     </>
@@ -49,11 +51,21 @@ function AnimatedRoutes() {
   )
 }
 
+import CustomCursor from './components/CustomCursor'
+import { motion, useScroll, useSpring as useFramerSpring } from 'framer-motion'
+
 function App() {
   const [loading, setLoading] = useState(true)
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('portfolio-theme')
     return saved || 'light'
+  })
+
+  const { scrollYProgress } = useScroll()
+  const scaleX = useFramerSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
   })
 
   useEffect(() => {
@@ -70,6 +82,8 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <CustomCursor />
+      <motion.div className="scroll-progress" style={{ scaleX }} />
       <AnimatePresence mode="wait">
         {loading && <Loader key="loader" />}
       </AnimatePresence>

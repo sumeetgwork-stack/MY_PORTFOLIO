@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { HiArrowRight, HiOutlineMail } from 'react-icons/hi'
+import Magnetic from './Magnetic'
 
 const line = {
   hidden: { opacity: 0, y: 50 },
@@ -20,7 +21,7 @@ const Hero = () => (
           Available for opportunities
         </motion.div>
 
-        <motion.h1 custom={1} variants={line} initial="hidden" animate="visible">
+        <motion.h1 custom={1} variants={line} initial="hidden" animate="visible" className="text-shimmer">
           Hi, I&apos;m<br />
           Sumeet <em>Gupta</em>
         </motion.h1>
@@ -31,12 +32,16 @@ const Hero = () => (
         </motion.p>
 
         <motion.div className="hero-buttons" custom={3} variants={line} initial="hidden" animate="visible">
-          <Link to="/projects" className="btn-primary">
-            View My Work <HiArrowRight />
-          </Link>
-          <a href="#contact" className="btn-outline">
-            <HiOutlineMail /> Get in Touch
-          </a>
+          <Magnetic>
+            <Link to="/projects" className="btn-primary">
+              View My Work <HiArrowRight />
+            </Link>
+          </Magnetic>
+          <Magnetic>
+            <a href="#contact" className="btn-outline">
+              <HiOutlineMail /> Get in Touch
+            </a>
+          </Magnetic>
         </motion.div>
       </div>
     </div>
