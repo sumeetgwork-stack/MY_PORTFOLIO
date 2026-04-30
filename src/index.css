@@ -92,7 +92,7 @@ main { position: relative; z-index: 1; }
 
 /* ---------- Top Navbar ---------- */
 .top-navbar {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
