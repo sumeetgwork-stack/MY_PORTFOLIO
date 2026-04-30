@@ -631,18 +631,7 @@ section { padding: var(--section-padding); position: relative; }
   margin-left: 60px;
 }
 
-.cylinder-hand-bg {
-  position: absolute;
-  bottom: -200px; /* Positions hand below the cylinder */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 450px;
-  max-width: none;
-  z-index: 0; /* Behind the track */
-  pointer-events: none;
-  opacity: 0.9;
-  transition: opacity 0.3s;
-}
+
 
 .cylinder-track {
   width: 100%;
