@@ -223,12 +223,7 @@ const ProjectsPage = () => {
       const step = 360 / projects.length
 
       // Detect if the swipe is significant enough
-      if (Math.abs(deltaY) > Math.abs(deltaX)) {
-        // Vertical swipe (Up/Down)
-        if (Math.abs(deltaY) > 40) {
-          setRotation((prev) => prev - Math.sign(deltaY) * step)
-        }
-      } else {
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
         // Horizontal swipe (Left/Right)
         if (Math.abs(deltaX) > 40) {
           setRotation((prev) => prev - Math.sign(deltaX) * step)
