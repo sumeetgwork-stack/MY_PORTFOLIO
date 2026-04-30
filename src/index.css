@@ -526,11 +526,14 @@ section { padding: var(--section-padding); position: relative; }
 /* ---------- Footer ---------- */
 .footer { padding: 40px 0; border-top: 1px solid var(--border-color); }
 .footer .container { display: flex; justify-content: space-between; align-items: center; }
-.footer p { color: var(--text-muted); font-size: 0.8rem; }
+.footer-left { display: flex; flex-direction: column; gap: 4px; }
+.footer p { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+.footer-role { font-size: 0.72rem; color: var(--accent-text); text-transform: uppercase; letter-spacing: 1px; }
 
-.footer-socials { display: flex; gap: 16px; }
-.footer-socials a { color: var(--text-muted); font-size: 1rem; transition: var(--transition); }
-.footer-socials a:hover { color: var(--accent-text); }
+.footer-socials { display: flex; gap: 20px; }
+.footer-socials a { font-size: 1.5rem; transition: var(--transition); color: var(--text-muted); }
+.footer-socials a.linkedin:hover { color: #0077b5; transform: translateY(-3px); }
+.footer-socials a.github:hover { color: var(--text-primary); transform: translateY(-3px); }
 
 /* ---------- Projects Page ---------- */
 .projects-page { min-height: 100vh; background: var(--bg-primary); overflow: hidden; }
