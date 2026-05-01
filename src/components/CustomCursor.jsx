@@ -5,7 +5,7 @@ const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
 
-  const springConfig = { damping: 25, stiffness: 150 }
+  const springConfig = { damping: 20, stiffness: 400, mass: 0.5 }
   const cursorX = useSpring(0, springConfig)
   const cursorY = useSpring(0, springConfig)
 

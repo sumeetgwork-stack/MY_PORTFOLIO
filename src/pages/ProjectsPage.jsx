@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { HiArrowLeft, HiX } from 'react-icons/hi'
+import { HiArrowLeft, HiX, HiArrowNarrowRight, HiArrowNarrowLeft } from 'react-icons/hi'
 
 /* ──────────── PROJECT DATA ──────────── */
 const projects = [
@@ -97,7 +97,7 @@ const CylinderCarousel = ({ onSelect, selectedId, rotation }) => {
 }
 
 /* ──────────── DETAIL PANEL ──────────── */
-const DetailPanel = ({ project, onClose }) => (
+const DetailPanel = ({ project, onClose, onNext, onPrev }) => (
   <motion.div
     className="project-detail-panel"
     initial={{ opacity: 0, x: 80, scale: 0.96 }}
@@ -162,6 +162,15 @@ const DetailPanel = ({ project, onClose }) => (
         </motion.span>
       ))}
     </div>
+
+    <div className="detail-navigation">
+      <button onClick={onPrev} className="nav-btn prev">
+        <HiArrowNarrowLeft /> Previous
+      </button>
+      <button onClick={onNext} className="nav-btn next">
+        Next <HiArrowNarrowRight />
+      </button>
+    </div>
   </motion.div>
 )
 
@@ -172,6 +181,28 @@ const ProjectsPage = () => {
   const selectedProject = projects.find((p) => p.id === selectedId)
   const isLocked = useRef(false)
   const layoutRef = useRef(null)
+
+  const handleNext = () => {
+    const currentIndex = projects.findIndex(p => p.id === selectedId)
+    const nextIndex = (currentIndex + 1) % projects.length
+    const nextProject = projects[nextIndex]
+    
+    // Rotate cylinder to show the next one
+    const step = 360 / projects.length
+    setRotation(prev => prev - step)
+    setSelectedId(nextProject.id)
+  }
+
+  const handlePrev = () => {
+    const currentIndex = projects.findIndex(p => p.id === selectedId)
+    const prevIndex = (currentIndex - 1 + projects.length) % projects.length
+    const prevProject = projects[prevIndex]
+    
+    // Rotate cylinder to show the previous one
+    const step = 360 / projects.length
+    setRotation(prev => prev + step)
+    setSelectedId(prevProject.id)
+  }
 
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -268,6 +299,8 @@ const ProjectsPage = () => {
               key={selectedProject.id}
               project={selectedProject}
               onClose={() => setSelectedId(null)}
+              onNext={handleNext}
+              onPrev={handlePrev}
             />
           )}
         </AnimatePresence>

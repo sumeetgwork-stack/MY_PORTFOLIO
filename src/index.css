@@ -67,6 +67,7 @@
   background: linear-gradient(90deg, var(--text-primary) 0%, var(--accent) 50%, var(--text-primary) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shimmer 6s linear infinite;
 }
@@ -864,4 +865,38 @@ body, .top-navbar, .skill-card, .cert-card, .contact-item, .about-detail-item,
 .theme-toggle, .project-detail-panel, .back-link, .cylinder-face,
 .nav-resume-btn, .nav-logo, .nav-link, .mobile-menu, .mobile-nav-link {
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.detail-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-text);
+  background: var(--accent-soft);
+}
+
+.nav-btn svg {
+  font-size: 1.1rem;
 }
