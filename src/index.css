@@ -98,6 +98,13 @@
   body, a, button { cursor: none !important; }
 }
 
+/* Hide custom cursor on mobile/tablet */
+@media (max-width: 1024px) {
+  .cursor-follower, .cursor-dot {
+    display: none !important;
+  }
+}
+
 /* ---------- Scroll Progress ---------- */
 .scroll-progress {
   position: fixed;
