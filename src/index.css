@@ -615,7 +615,9 @@ section { padding: var(--section-padding); position: relative; }
 }
 
 .cylinder-layout.shifted {
+  flex-direction: column;
   justify-content: flex-start;
+  padding-top: 40px;
 }
 
 .cylinder-viewport {
@@ -624,12 +626,14 @@ section { padding: var(--section-padding); position: relative; }
   perspective: 900px;
   position: relative;
   flex-shrink: 0;
-  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: visible;
 }
 
 .cylinder-layout.shifted .cylinder-viewport {
-  margin-left: 60px;
+  transform: translateY(-80px) scale(0.65);
+  margin-left: 0;
+  height: 150px; /* Collapse height so panel moves up */
 }
 
 
@@ -721,15 +725,18 @@ section { padding: var(--section-padding); position: relative; }
 /* Detail panel */
 .project-detail-panel {
   flex: 1;
-  max-width: 520px;
+  width: 100%;
+  max-width: 850px; /* Wider for full screen feel */
   padding: 44px;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   background: var(--bg-card);
-  margin-left: 60px;
+  margin-left: 0;
+  margin-top: -20px;
   position: relative;
-  max-height: 80vh;
+  max-height: 70vh;
   overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
 .detail-close-btn {
