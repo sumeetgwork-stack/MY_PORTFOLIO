@@ -632,19 +632,6 @@ section { padding: var(--section-padding); position: relative; }
   margin-left: 60px;
 }
 
-@media (max-width: 1024px) {
-  .cylinder-layout.shifted {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 40px;
-  }
-  .cylinder-layout.shifted .cylinder-viewport {
-    transform: translateY(-40px) scale(0.65);
-    margin-left: 0;
-    height: 180px;
-  }
-}
-
 
 
 .cylinder-track {
@@ -744,16 +731,6 @@ section { padding: var(--section-padding); position: relative; }
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 1024px) {
-  .project-detail-panel {
-    max-width: 100%;
-    margin-left: 0;
-    margin-top: -20px;
-    max-height: 70vh;
-    padding: 30px 20px;
-  }
 }
 
 .detail-close-btn {
@@ -867,14 +844,32 @@ section { padding: var(--section-padding); position: relative; }
   .footer .container { flex-direction: column; gap: 16px; text-align: center; }
 
   /* Cylinder Mobile Optimization */
-  .cylinder-viewport { width: 100%; max-width: 320px; height: 320px; perspective: 700px; }
+  .cylinder-viewport { width: 100%; max-width: 320px; height: 320px; perspective: 700px; transition: all 0.8s ease; }
   .cylinder-face { width: 150px; height: 220px; margin-left: -75px; margin-top: -110px; padding: 16px 12px; }
   .cylinder-face-title { font-size: 0.95rem; }
   .cylinder-face-emoji { font-size: 1.6rem; }
-  .project-detail-panel { padding: 24px; margin-left: 0; max-height: none; }
+  
+  .cylinder-layout { display: flex; flex-direction: column; align-items: center; padding: 0 16px; transition: all 0.8s ease; }
+  
+  /* When selected, move carousel way up and collapse height */
+  .cylinder-layout.shifted .cylinder-viewport {
+    transform: translateY(-120px) scale(0.5); /* Push it higher */
+    height: 80px; /* Collapse more height */
+    opacity: 0.5; /* Fade it slightly so it doesn't distract from text */
+    margin-bottom: -40px;
+  }
+  
+  .project-detail-panel { 
+    padding: 24px; 
+    margin-left: 0; 
+    max-height: none; 
+    margin-top: 0; 
+    width: 100%;
+    z-index: 10;
+  }
+  
   .projects-back { top: 80px; left: 50%; transform: translateX(-50%); }
   .projects-page-header { padding-top: 130px; }
-  .cylinder-layout { padding: 0 16px; }
 }
 
 @media (max-width: 400px) {
