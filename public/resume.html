@@ -33,10 +33,29 @@
       padding: 40px 48px;
     }
 
+    @page {
+      margin: 0; /* Removes default browser header/footer (URL, date, page numbers) */
+      size: A4 portrait;
+    }
+
     @media print {
-      body { font-size: 10pt; }
-      .page { padding: 20px 32px; max-width: 100%; }
+      body { font-size: 9pt; }
+      .page { padding: 15mm 20mm; max-width: 100%; }
       .no-print { display: none !important; }
+      
+      /* Compact spacing to ensure it fits on one page */
+      .section { margin-bottom: 12px; }
+      .header { margin-bottom: 12px; padding-bottom: 8px; }
+      .header-left h1 { font-size: 22pt; }
+      .summary { font-size: 9pt; line-height: 1.4; }
+      .project { margin-bottom: 10px; }
+      .project-bullets li { font-size: 9pt; line-height: 1.4; margin-bottom: 2px; }
+      .skills-grid { gap: 4px 16px; }
+      .skill-label, .skill-value { font-size: 9pt; }
+      .edu-item { margin-bottom: 4px; }
+      .edu-item .degree, .edu-item .school, .edu-item .year { font-size: 9pt; }
+      .cert-item { margin-bottom: 4px; }
+      .cert-item .cert-name, .cert-item .cert-org { font-size: 9pt; }
     }
 
     /* ── Header ── */
@@ -228,18 +247,6 @@
         <li>Applying human-centered AI principles to close social accessibility gaps</li>
       </ul>
     </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-title">ChaloGhumo — Travel Planning Application</span>
-        <span class="project-subtitle">Full-Stack, REST API, Database</span>
-      </div>
-      <ul class="project-bullets">
-        <li>Built a user-focused full-stack application for intuitive trip planning with clean UI/UX</li>
-        <li>Designed and connected backend REST APIs with database integration</li>
-      </ul>
-    </div>
-
   </div>
 
   <!-- ════════ CERTIFICATIONS ════════ -->
