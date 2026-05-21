@@ -46,7 +46,7 @@
       /* Compact spacing to ensure it fits on one page */
       .section { margin-bottom: 12px; }
       .header { margin-bottom: 12px; padding-bottom: 8px; }
-      .header h1 { font-size: 22pt; }
+      .header-left h1 { font-size: 22pt; }
       .summary { font-size: 9pt; line-height: 1.4; }
       .project { margin-bottom: 10px; }
       .project-bullets li { font-size: 9pt; line-height: 1.4; margin-bottom: 2px; }
@@ -59,13 +59,12 @@
     }
 
     /* ── Header ── */
-    .header { margin-bottom: 24px; border-bottom: 2.5px solid var(--accent); padding-bottom: 16px; }
-    .header h1 { font-size: 26pt; font-weight: 700; letter-spacing: -0.02em; color: var(--primary); }
-    .header .tagline { font-size: 11pt; color: var(--accent); font-weight: 600; margin-top: 2px; margin-bottom: 8px; }
-    .header .contact-links { display: flex; flex-wrap: wrap; gap: 12px; font-size: 9.5pt; color: var(--secondary); }
-    .header .contact-links a { color: var(--accent); text-decoration: none; }
-    .header .contact-links a:hover { text-decoration: underline; }
-    .header .contact-links span { color: var(--muted); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; border-bottom: 2.5px solid var(--accent); padding-bottom: 16px; }
+    .header-left h1 { font-size: 26pt; font-weight: 700; letter-spacing: -0.02em; color: var(--primary); }
+    .header-left .tagline { font-size: 11pt; color: var(--accent); font-weight: 600; margin-top: 2px; }
+    .header-right { text-align: right; font-size: 9pt; color: var(--secondary); line-height: 1.8; }
+    .header-right a { color: var(--accent); text-decoration: none; }
+    .header-right a:hover { text-decoration: underline; }
 
     /* ── Section ── */
     .section { margin-bottom: 20px; }
@@ -121,17 +120,15 @@
 
   <!-- ════════ HEADER ════════ -->
   <div class="header">
-    <h1>Sumeet Gupta</h1>
-    <div class="tagline">Full Stack Developer · IoT · AI · Cybersecurity</div>
-    <div class="contact-links">
-      <span>Mumbai, India</span>
-      <span>•</span>
-      <a href="mailto:sumeetgwork@gmail.com">sumeetgwork@gmail.com</a>
-      <span>•</span>
-      <a href="https://linkedin.com/in/sumeetgupta07" target="_blank">linkedin.com/in/sumeetgupta07</a>
-      <span>•</span>
-      <a href="https://github.com/sumeetgwork-stack" target="_blank">github.com/sumeetgwork-stack</a>
-      <span>•</span>
+    <div class="header-left">
+      <h1>Sumeet Gupta</h1>
+      <div class="tagline">Full Stack Developer · IoT · AI · Cybersecurity</div>
+    </div>
+    <div class="header-right">
+      Mumbai, India<br />
+      <a href="mailto:sumeetgwork@gmail.com">sumeetgwork@gmail.com</a><br />
+      <a href="https://linkedin.com/in/sumeetgupta07" target="_blank">linkedin.com/in/sumeetgupta07</a><br />
+      <a href="https://github.com/sumeetgwork-stack" target="_blank">github.com/sumeetgwork-stack</a><br />
       <a href="https://thesumeetgupta.vercel.app" target="_blank">thesumeetgupta.vercel.app</a>
     </div>
   </div>
@@ -160,6 +157,13 @@
         <div class="school">Swami Vivekanand Jr College</div>
       </div>
       <div class="year">2021 — 2023</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="degree">SSC (Secondary School Certificate)</div>
+        <div class="school">Lokmanya Tilak High School</div>
+      </div>
+      <div class="year">2011 — 2021</div>
     </div>
   </div>
 
