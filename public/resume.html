@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumeet Gupta — Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #444466;
+      --muted: #777799;
+      --accent: #4f46e5;
+      --border: #e2e2ee;
+      --bg: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--primary);
+      background: var(--bg);
+      line-height: 1.6;
+      font-size: 10.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 48px;
+    }
+
+    @media print {
+      body { font-size: 10pt; }
+      .page { padding: 20px 32px; max-width: 100%; }
+      .no-print { display: none !important; }
+    }
+
+    /* ── Header ── */
+    .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; border-bottom: 2.5px solid var(--accent); padding-bottom: 16px; }
+    .header-left h1 { font-size: 26pt; font-weight: 700; letter-spacing: -0.02em; color: var(--primary); }
+    .header-left .tagline { font-size: 11pt; color: var(--accent); font-weight: 600; margin-top: 2px; }
+    .header-right { text-align: right; font-size: 9pt; color: var(--secondary); line-height: 1.8; }
+    .header-right a { color: var(--accent); text-decoration: none; }
+    .header-right a:hover { text-decoration: underline; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 20px; }
+    .section-title {
+      font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px;
+      color: var(--accent); margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 4px;
+    }
+
+    /* ── Summary ── */
+    .summary { font-size: 10pt; color: var(--secondary); line-height: 1.7; }
+
+    /* ── Education ── */
+    .edu-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+    .edu-item .degree { font-weight: 600; font-size: 10.5pt; }
+    .edu-item .school { color: var(--secondary); font-size: 9.5pt; }
+    .edu-item .year { font-size: 9pt; color: var(--muted); white-space: nowrap; }
+
+    /* ── Skills ── */
+    .skills-grid { display: grid; grid-template-columns: 120px 1fr; gap: 6px 16px; }
+    .skill-label { font-weight: 600; font-size: 9.5pt; color: var(--primary); }
+    .skill-value { font-size: 9.5pt; color: var(--secondary); }
+
+    /* ── Projects ── */
+    .project { margin-bottom: 14px; }
+    .project-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .project-title { font-weight: 600; font-size: 10.5pt; }
+    .project-subtitle { font-size: 9pt; color: var(--muted); font-style: italic; }
+    .project-tech { font-size: 8.5pt; color: var(--accent); margin-top: 1px; }
+    .project-bullets { padding-left: 18px; margin-top: 3px; }
+    .project-bullets li { font-size: 9.5pt; color: var(--secondary); margin-bottom: 2px; }
+
+    /* ── Certifications ── */
+    .cert-item { margin-bottom: 6px; }
+    .cert-item .cert-name { font-weight: 600; font-size: 10pt; }
+    .cert-item .cert-org { font-size: 9pt; color: var(--muted); }
+
+    /* ── Print Button ── */
+    .print-bar {
+      position: fixed; bottom: 0; left: 0; right: 0; background: var(--primary);
+      padding: 14px 24px; display: flex; justify-content: center; gap: 16px; z-index: 100;
+    }
+    .print-bar button {
+      background: var(--accent); color: #fff; border: none; padding: 10px 28px;
+      border-radius: 8px; font-size: 10pt; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif;
+    }
+    .print-bar button:hover { filter: brightness(1.15); }
+    .print-bar span { color: #aaa; font-size: 9pt; display: flex; align-items: center; }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ════════ HEADER ════════ -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Sumeet Gupta</h1>
+      <div class="tagline">Full Stack Developer · IoT · AI · Cybersecurity</div>
+    </div>
+    <div class="header-right">
+      Mumbai, India<br />
+      <a href="mailto:sumeetgwork@gmail.com">sumeetgwork@gmail.com</a><br />
+      <a href="https://linkedin.com/in/sumeetgupta07" target="_blank">linkedin.com/in/sumeetgupta07</a><br />
+      <a href="https://github.com/sumeetgwork-stack" target="_blank">github.com/sumeetgwork-stack</a><br />
+      <a href="https://thesumeetgupta.vercel.app" target="_blank">thesumeetgupta.vercel.app</a>
+    </div>
+  </div>
+
+  <!-- ════════ SUMMARY ════════ -->
+  <div class="section">
+    <div class="section-title">Summary</div>
+    <p class="summary">
+      Passionate Computer Science Engineering student at Xavier Institute of Engineering with hands-on experience building full-stack web applications, IoT systems, and AI-powered solutions. Proficient in React, JavaScript, Python, and embedded systems. Proven ability to deliver end-to-end projects — from 3D e-commerce platforms and blockchain fundraising tools to IoT surveillance rovers for disaster response. Eager to contribute to innovative teams and solve real-world problems through technology.
+    </p>
+  </div>
+
+  <!-- ════════ EDUCATION ════════ -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div>
+        <div class="degree">Bachelor of Engineering — Computer Science and Engineering</div>
+        <div class="school">Xavier Institute of Engineering, Mumbai</div>
+      </div>
+      <div class="year">2023 — 2027</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="degree">HSC (Higher Secondary Certificate)</div>
+        <div class="school">Swami Vivekanand Jr College</div>
+      </div>
+      <div class="year">2021 — 2023</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="degree">SSC (Secondary School Certificate)</div>
+        <div class="school">Lokmanya Tilak High School</div>
+      </div>
+      <div class="year">2011 — 2021</div>
+    </div>
+  </div>
+
+  <!-- ════════ SKILLS ════════ -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-label">Languages</div>
+      <div class="skill-value">JavaScript, Python, Java, C, HTML, CSS</div>
+      <div class="skill-label">Frontend</div>
+      <div class="skill-value">React, Tailwind CSS, Framer Motion, Three.js, Responsive Design</div>
+      <div class="skill-label">Backend</div>
+      <div class="skill-value">Node.js, REST APIs, Database Design, Authentication</div>
+      <div class="skill-label">IoT</div>
+      <div class="skill-value">Arduino, Sensors, IoT Protocols, Real-time Communication, Embedded Systems</div>
+      <div class="skill-label">Blockchain</div>
+      <div class="skill-value">Web3, Smart Contracts, KYC Systems, Decentralized Applications</div>
+      <div class="skill-label">Security</div>
+      <div class="skill-value">Ethical Hacking, Cloud Security, Penetration Testing</div>
+      <div class="skill-label">Tools</div>
+      <div class="skill-value">Git, GitHub, Vercel, VS Code, Figma, Android Studio</div>
+    </div>
+  </div>
+
+  <!-- ════════ PROJECTS ════════ -->
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">OatbitesBySEJ — 3D E-commerce Website</span>
+        <span class="project-subtitle">React, Three.js, Admin Panel</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Built a fully functional 3D interactive e-commerce website for a client with immersive product showcase</li>
+        <li>Implemented weight-based product variants with dynamic pricing and a real-time shopping cart</li>
+        <li>Developed a custom admin dashboard for complete product, variant, and order management</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">ChainFund — Blockchain Fundraising Platform</span>
+        <span class="project-subtitle">Blockchain, Web3, Full-Stack</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Built a decentralized fundraising platform using Web3 technologies with transparent fund tracking</li>
+        <li>Implemented comprehensive KYC management and admin application processing logic</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Medicare+ — IoT & Blockchain Health App</span>
+        <span class="project-subtitle">React Native, IoT, Blockchain</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Developed a robust cross-platform mobile application with dark/light theme support</li>
+        <li>Integrated IoT health sensors with Blockchain data security for patient health monitoring</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">RoboRover — IoT Surveillance Rover</span>
+        <span class="project-subtitle">IoT, Sensors, Embedded Systems</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Designed and built an intelligent rover with IoT sensors for disaster response scenarios</li>
+        <li>Established real-time monitoring with reliable wireless communication protocols</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">AI Communication Assistant — For Mute Individuals</span>
+        <span class="project-subtitle">Machine Learning, Python, AI</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Training gesture-recognition ML models to enable inclusive communication for mute individuals</li>
+        <li>Applying human-centered AI principles to close social accessibility gaps</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">ChaloGhumo — Travel Planning Application</span>
+        <span class="project-subtitle">Full-Stack, REST API, Database</span>
+      </div>
+      <ul class="project-bullets">
+        <li>Built a user-focused full-stack application for intuitive trip planning with clean UI/UX</li>
+        <li>Designed and connected backend REST APIs with database integration</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ════════ CERTIFICATIONS ════════ -->
+  <div class="section">
+    <div class="section-title">Workshops & Certifications</div>
+    <div class="cert-item">
+      <span class="cert-name">Certified Cloud Security Professional</span>
+      <span class="cert-org"> — Cloud security controls, risk assessment, and architecture</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-name">Skills4Future Workshop</span>
+      <span class="cert-org"> — Edunet Foundation · Emerging technologies & industry skills</span>
+    </div>
+    <div class="cert-item">
+      <span class="cert-name">Ethical Hacking Workshop</span>
+      <span class="cert-org"> — Hactify · Penetration testing methods & security tooling</span>
+    </div>
+  </div>
+
+  <!-- ════════ LANGUAGES ════════ -->
+  <div class="section">
+    <div class="section-title">Languages</div>
+    <p class="summary">English (Fluent) · Hindi (Native)</p>
+  </div>
+
+</div>
+
+<!-- ════════ PRINT BAR ════════ -->
+<div class="print-bar no-print">
+  <span>Press Ctrl+P or click →</span>
+  <button onclick="window.print()">📄 Save as PDF</button>
+</div>
+
+</body>
+</html>

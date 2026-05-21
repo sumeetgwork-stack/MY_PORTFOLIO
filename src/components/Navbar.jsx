@@ -109,7 +109,7 @@ const Navbar = () => {
 
       {/* Right side actions + Mobile Hamburger */}
       <div className="nav-right">
-        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-resume-btn">
+        <a href="/resume.html" target="_blank" rel="noreferrer" className="nav-resume-btn">
           Resume
         </a>
         <ThemeToggle />
