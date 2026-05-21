@@ -12,7 +12,7 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1, del
 const data = [
   { icon: <HiCode />, title: 'Programming', desc: 'Building robust applications with clean, efficient code.', tags: ['HTML', 'CSS', 'React', 'JavaScript', 'Tailwind CSS', 'C', 'Java', 'Python'] },
   { icon: <HiCog />, title: 'IoT & Automation', desc: 'Creating connected devices and intelligent automation systems.', tags: ['IoT Protocols', 'Sensors', 'Arduino', 'Automation'] },
-  { icon: <HiShieldCheck />, title: 'Cybersecurity', desc: 'Protecting digital assets through testing and assessment.', tags: ['Ethical Hacking', 'Cloud Security'] },
+  { icon: <HiShieldCheck />, title: 'Cybersecurity', desc: 'Protecting digital assets through testing and assessment.', tags: ['Ethical Hacking'] },
   { icon: <HiDesktopComputer />, title: 'Full-Stack Dev', desc: 'Designing complete web applications with user-centric approach.', tags: ['Frontend', 'Backend', 'Database', 'UI/UX'] },
 ]
 
