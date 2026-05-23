@@ -119,7 +119,8 @@
       .page { padding: 24px 20px 120px 20px; }
       .header h1 { font-size: 20pt; }
       .header .location { font-size: 10pt; }
-      .header .contact-links { gap: 4px; font-size: 2.2vw; } /* Scales dynamically to guarantee 1 row */
+      .header .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 8pt; white-space: normal; }
+      .header .contact-links span { display: none; } /* Hide bullets on mobile grid */
       .skills-grid { grid-template-columns: 1fr; gap: 2px 0; margin-bottom: 8px; }
       .skill-label { font-size: 10pt; margin-top: 6px; }
       .skill-value { font-size: 9.5pt; }
@@ -127,8 +128,8 @@
       .edu-item .year { margin-top: 2px; font-size: 8.5pt; }
       .project-header { flex-direction: column; align-items: flex-start; }
       .project-subtitle { margin-top: 2px; font-size: 8.5pt; }
-      .print-bar { flex-direction: column; padding: 12px; gap: 8px; text-align: center; }
-      .print-bar span { justify-content: center; }
+      .print-bar { padding: 16px; flex-direction: row; }
+      .print-bar span { display: none; } /* Hide the 'Ctrl+P' text on mobile */
     }
   </style>
 </head>
