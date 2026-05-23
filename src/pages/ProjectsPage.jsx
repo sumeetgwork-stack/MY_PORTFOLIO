@@ -39,7 +39,7 @@ const projects = [
     id: 6, number: '06', title: 'Medicare+', subtitle: 'IoT & Blockchain App',
     description: 'A secure mobile application combining IoT health devices and Blockchain technology to securely track and manage patient data.',
     highlights: ['Developed a robust mobile application with a stabilized dark theme', 'Integrated IoT sensors with Blockchain data security for health monitoring'],
-    tech: ['IoT', 'Blockchain', 'React Native', 'Mobile'], emoji: '🩺',
+    tech: ['IoT', 'Blockchain', 'Flutter', 'Mobile'], emoji: '🩺',
   },
   {
     id: 7, number: '07', title: 'OatbitesBySEJ', subtitle: '3D E-commerce Website',
