@@ -21,6 +21,22 @@ const Education = () => {
             className="timeline-item"
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <div className="timeline-dot" />
+            <div className="timeline-content">
+              <span className="year">2011 — 2021</span>
+              <h3>SSC</h3>
+              <p className="institution" style={{ color: 'var(--text-muted)', marginTop: '4px' }}>
+                Lokmanya Tilak High School
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="timeline-item"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <div className="timeline-dot" />
