@@ -32,6 +32,7 @@ const projects = [
   {
     id: 5, number: '05', title: 'ChainFund', subtitle: 'Blockchain Fundraising Platform',
     link: 'https://chainfund.onrender.com',
+    github: 'https://github.com/sumeetgwork-stack/chainfund',
     description: 'A blockchain-based fundraising platform with robust KYC management and admin application processing, featuring a clean, optimized interface.',
     highlights: ['Built a decentralized fundraising platform using Web3 technologies', 'Implemented comprehensive KYC management and admin processing logic'],
     tech: ['Blockchain', 'Web3', 'KYC', 'Full-Stack'], emoji: '🔗',
@@ -45,6 +46,7 @@ const projects = [
   {
     id: 7, number: '07', title: 'OatbitesBySEJ', subtitle: '3D E-commerce Website',
     link: 'https://oatbitesbysej.vercel.app',
+    github: 'https://github.com/sumeetgwork-stack/oatbites',
     description: 'A highly interactive 3D e-commerce platform featuring dynamic weight-based product variants, pricing models, and an admin dashboard.',
     highlights: ['Created a fully functional 3D website for an e-commerce client', 'Implemented weight-based product variants and dynamic shopping cart logic', 'Developed a custom admin dashboard for product management'],
     tech: ['3D Web', 'E-commerce', 'Admin Panel', 'React'], emoji: '🍪',
@@ -165,33 +167,44 @@ const DetailPanel = ({ project, onClose, onNext, onPrev }) => (
       ))}
     </div>
 
-    {project.link && (
+    {(project.link || project.github) && (
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        style={{ marginTop: '16px' }}
+        style={{ marginTop: '16px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}
       >
-        <a 
-          href={project.link} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            background: 'var(--accent)',
-            color: '#fff',
-            padding: '10px 20px',
-            borderRadius: '6px',
-            textDecoration: 'none',
-            fontWeight: '600',
-            fontSize: '14px',
-            letterSpacing: '0.5px'
-          }}
-        >
-          Live Preview <HiArrowNarrowRight />
-        </a>
+        {project.link && (
+          <a 
+            href={project.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: 'var(--accent)', color: '#fff', padding: '10px 20px',
+              borderRadius: '6px', textDecoration: 'none', fontWeight: '600',
+              fontSize: '14px', letterSpacing: '0.5px'
+            }}
+          >
+            Live Preview <HiArrowNarrowRight />
+          </a>
+        )}
+        {project.github && (
+          <a 
+            href={project.github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: 'transparent', color: 'var(--primary)', padding: '10px 20px',
+              border: '2px solid var(--primary)', borderRadius: '6px', 
+              textDecoration: 'none', fontWeight: '600', fontSize: '14px', 
+              letterSpacing: '0.5px'
+            }}
+          >
+            Source Code
+          </a>
+        )}
       </motion.div>
     )}
 
