@@ -25,6 +25,7 @@ const projects = [
   },
   {
     id: 4, number: '04', title: 'Quiz Application', subtitle: 'Interactive Web Platform',
+    link: 'https://testgenix.vercel.app',
     description: 'A dynamic quiz tool with secure authentication, real-time scoring, and a fully responsive layout built from scratch.',
     highlights: ['Developed interactive quiz with dynamic questions', 'Added secure login, scoring, and responsive layout'],
     tech: ['HTML', 'CSS', 'JavaScript', 'Backend'], emoji: '📝',
