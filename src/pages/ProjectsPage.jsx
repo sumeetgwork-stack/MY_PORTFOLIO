@@ -24,11 +24,12 @@ const projects = [
     tech: ['Machine Learning', 'Gesture Recognition', 'Python', 'AI'], emoji: '🧠',
   },
   {
-    id: 4, number: '04', title: 'Quiz Application', subtitle: 'Interactive Web Platform',
+    id: 4, number: '04', title: 'TestGenix', subtitle: 'Secure Examination Platform',
     link: 'https://testgenix.vercel.app',
-    description: 'A dynamic quiz tool with secure authentication, real-time scoring, and a fully responsive layout built from scratch.',
-    highlights: ['Developed interactive quiz with dynamic questions', 'Added secure login, scoring, and responsive layout'],
-    tech: ['HTML', 'CSS', 'JavaScript', 'Backend'], emoji: '📝',
+    github: 'https://github.com/sumeetgwork-stack/quizify-app',
+    description: 'A premium, highly secure online examination platform featuring robust anti-cheating mechanisms, AI-assisted quiz generation, and comprehensive role-based dashboards.',
+    highlights: ['Implemented strict proctoring with tab-switching detection and copy/paste prevention', 'Built comprehensive role-based access for Admins, Teachers, and Students', 'Integrated smart exam creation and PDF question parsing'],
+    tech: ['Next.js', 'React', 'Security', 'Full-Stack'], emoji: '📝',
   },
   {
     id: 5, number: '05', title: 'ChainFund', subtitle: 'Blockchain Fundraising Platform',
