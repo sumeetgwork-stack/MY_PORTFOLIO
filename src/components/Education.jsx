@@ -66,6 +66,19 @@ const Education = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          className="coursework-section"
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          style={{ marginTop: '48px', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+        >
+          <h3 style={{ fontSize: '1.2rem', marginBottom: '12px', color: 'var(--primary)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Relevant Coursework</h3>
+          <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', fontSize: '0.95rem' }}>
+            Computer Networks · Operating Systems · Database Management Systems (DBMS) · Cloud Computing · Information Security & Cryptography · Artificial Intelligence · Machine Learning · Internet of Things (IoT) · Blockchain Technology · Analysis of Algorithms
+          </p>
+        </motion.div>
       </div>
     </section>
   )

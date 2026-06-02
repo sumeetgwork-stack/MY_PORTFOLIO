@@ -10,6 +10,7 @@ const fadeUp = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }
 
 const certs = [
+  { icon: <HiShieldCheck />, title: 'Agentic AI: Learner to Builder', org: 'IBM', desc: 'Hands-on exploration of Agentic AI, moving from foundational concepts to building functional, intelligent agents.' },
   { icon: <HiShieldCheck />, title: 'Certified Cloud Security Professional', desc: 'Expertise in cloud security controls, risk assessment, and architecture vulnerabilities.' },
   { icon: <HiLightningBolt />, title: 'Skills4Future Workshop', org: 'Edunet Foundation', desc: 'Hands-on training on emerging technologies and industry-ready skill development.' },
   { icon: <HiAcademicCap />, title: 'Ethical Hacking Workshop', org: 'Hactify', desc: 'Practical experience with penetration testing methods and security tooling.' },

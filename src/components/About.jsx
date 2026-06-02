@@ -13,7 +13,7 @@ const About = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 })
 
   const details = [
-    { icon: <HiLocationMarker />, label: 'Location', value: 'Mumbai, India' },
+    { icon: <HiLocationMarker />, label: 'Location', value: 'Mumbai, India | +91 8104953424' },
     { icon: <HiAcademicCap />, label: 'University', value: 'Xavier Institute of Eng.' },
     { icon: <HiCode />, label: 'Focus', value: 'Full-Stack & IoT' },
     { icon: <HiGlobe />, label: 'Languages', value: 'English, Hindi' },
