@@ -503,6 +503,18 @@ section { padding: var(--section-padding); position: relative; }
 
 .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
+.skill-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skill-card:last-child:nth-child(odd) .skill-tags {
+  justify-content: center;
+}
+
 .skill-tag {
   font-size: 0.7rem;
   padding: 4px 12px;
