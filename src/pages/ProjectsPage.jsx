@@ -46,12 +46,12 @@ const projects = [
     tech: ['IoT', 'Blockchain', 'Flutter', 'Mobile'], emoji: '🩺',
   },
   {
-    id: 7, number: '07', title: 'OatbitesBySEJ', subtitle: '3D E-commerce Website',
-    link: 'https://oatbitesbysej.vercel.app',
+    id: 7, number: '07', title: 'Oatbites by SEJ', subtitle: 'Premium E-Commerce Platform',
+    link: 'https://www.oatbites.in',
     github: 'https://github.com/sumeetgwork-stack/oatbites',
-    description: 'A highly interactive 3D e-commerce platform featuring dynamic weight-based product variants, pricing models, and an admin dashboard.',
-    highlights: ['Created a fully functional 3D website for an e-commerce client', 'Implemented weight-based product variants and dynamic shopping cart logic', 'Developed a custom admin dashboard for product management'],
-    tech: ['3D Web', 'E-commerce', 'Admin Panel', 'React'], emoji: '🍪',
+    description: 'A full-featured PWA e-commerce platform with a smart shopping cart, secure Razorpay checkout, and MongoDB-synced user data.',
+    highlights: ['Built a progressive web app (PWA) with offline support and push notifications', 'Integrated Razorpay for secure payments and Google OAuth for authentication', 'Developed a smart cart syncing data across devices via MongoDB'],
+    tech: ['Next.js', 'React', 'MongoDB', 'Razorpay'], emoji: '🍪',
   },
 ]
 
