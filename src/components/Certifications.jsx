@@ -12,7 +12,7 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1, del
 const certs = [
   { icon: <HiShieldCheck />, title: 'Agentic AI: Learner to Builder', org: 'IBM', date: 'Jul 2025 - Aug 2025', desc: 'Hands-on exploration of Agentic AI, moving from foundational concepts to building functional, intelligent agents.', link: 'https://drive.google.com/file/d/1XSIjQZvnaXKw_slMxxxyjglnEe48LAb1/view?usp=drive_link' },
   { icon: <HiShieldCheck />, title: 'Certified Cloud Security Professional', date: 'Oct 2025 - Nov 2025', desc: 'Expertise in cloud security controls, risk assessment, and architecture vulnerabilities.', link: 'https://drive.google.com/file/d/17eYzXJOa5U4XvXRf0peqood6XRmOSb-m/view?usp=drive_link' },
-  { icon: <HiLightningBolt />, title: 'Skills4Future Workshop', org: 'Edunet Foundation', date: 'Oct 2025', desc: 'Hands-on training on emerging technologies and industry-ready skill development.' },
+  { icon: <HiLightningBolt />, title: 'Skills4Future Workshop', org: 'Edunet Foundation', date: 'Oct 2025', desc: 'Hands-on training on emerging technologies and industry-ready skill development.', link: 'https://drive.google.com/file/d/1REx0UndP9fA4CboejpArzyt8-JprRXRN/view?usp=drive_link' },
   { icon: <HiAcademicCap />, title: 'Ethical Hacking Workshop', org: 'Hactify', date: 'Dec 2025, June 2024, Dec 2023 - Jan 2024', desc: 'Practical experience with penetration testing methods and security tooling.', link: 'https://drive.google.com/file/d/1VAeAVyJKkihJ3PvTfTh3faIIWNbbWeHR/view?usp=drive_link' },
   { icon: <HiAcademicCap />, title: 'GDG on campus GEN AI', date: 'Feb 2024', desc: 'Generative AI fundamentals.', link: 'https://drive.google.com/file/d/1SKvhAn-2QOxka4qaKNSiwQNw12idPGJF/view?usp=drive_link' },
 ]
