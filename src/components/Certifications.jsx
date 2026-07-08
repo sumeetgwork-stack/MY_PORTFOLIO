@@ -10,11 +10,11 @@ const fadeUp = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }
 
 const certs = [
-  { icon: <HiShieldCheck />, title: 'Agentic AI: Learner to Builder', org: 'IBM', date: 'Jul 2025 - Aug 2025', desc: 'Hands-on exploration of Agentic AI, moving from foundational concepts to building functional, intelligent agents.' },
-  { icon: <HiShieldCheck />, title: 'Certified Cloud Security Professional', date: 'Oct 2025 - Nov 2025', desc: 'Expertise in cloud security controls, risk assessment, and architecture vulnerabilities.' },
+  { icon: <HiShieldCheck />, title: 'Agentic AI: Learner to Builder', org: 'IBM', date: 'Jul 2025 - Aug 2025', desc: 'Hands-on exploration of Agentic AI, moving from foundational concepts to building functional, intelligent agents.', link: 'https://drive.google.com/file/d/18Cw1eeEqW5DzD5utG9hUSEWvc25bHMvG/view?usp=drive_link' },
+  { icon: <HiShieldCheck />, title: 'Certified Cloud Security Professional', date: 'Oct 2025 - Nov 2025', desc: 'Expertise in cloud security controls, risk assessment, and architecture vulnerabilities.', link: 'https://drive.google.com/file/d/17eYzXJOa5U4XvXRf0peqood6XRmOSb-m/view?usp=drive_link' },
   { icon: <HiLightningBolt />, title: 'Skills4Future Workshop', org: 'Edunet Foundation', date: 'Oct 2025', desc: 'Hands-on training on emerging technologies and industry-ready skill development.' },
-  { icon: <HiAcademicCap />, title: 'Ethical Hacking Workshop', org: 'Hactify', date: 'Dec 2025, June 2024, Dec 2023 - Jan 2024', desc: 'Practical experience with penetration testing methods and security tooling.' },
-  { icon: <HiAcademicCap />, title: 'GDG on campus GEN AI', date: 'Feb 2024', desc: 'Generative AI fundamentals.' },
+  { icon: <HiAcademicCap />, title: 'Ethical Hacking Workshop', org: 'Hactify', date: 'Dec 2025, June 2024, Dec 2023 - Jan 2024', desc: 'Practical experience with penetration testing methods and security tooling.', link: 'https://drive.google.com/file/d/1VAeAVyJKkihJ3PvTfTh3faIIWNbbWeHR/view?usp=drive_link' },
+  { icon: <HiAcademicCap />, title: 'GDG on campus GEN AI', date: 'Feb 2024', desc: 'Generative AI fundamentals.', link: 'https://drive.google.com/file/d/1SKvhAn-2QOxka4qaKNSiwQNw12idPGJF/view?usp=drive_link' },
 ]
 
 const Certifications = () => {
@@ -30,7 +30,15 @@ const Certifications = () => {
           {certs.map((c) => (
             <motion.div key={c.title} className="cert-card" variants={fadeUp}>
               <div className="cert-icon">{c.icon}</div>
-              <h3>{c.title}</h3>
+              <h3>
+                {c.link ? (
+                  <a href={c.link} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', textDecorationColor: 'var(--accent)' }}>
+                    {c.title}
+                  </a>
+                ) : (
+                  c.title
+                )}
+              </h3>
               <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)', letterSpacing: '1px', marginBottom: '8px' }}>
                 {c.org ? `${c.org} | ` : ''}{c.date}
               </p>
