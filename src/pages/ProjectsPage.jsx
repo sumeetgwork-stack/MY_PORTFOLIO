@@ -12,13 +12,13 @@ const projects = [
     tech: ['Full-Stack', 'UI/UX', 'Database', 'REST API'], emoji: '✈️',
   },
   {
-    id: 2, number: '02', title: 'RoboRover', subtitle: 'IoT Surveillance Rover',
+    id: 2, number: '02', title: 'RoboRover', subtitle: 'Jan 2025 - April 2025 | IoT Surveillance Rover',
     description: 'An intelligent rover equipped with IoT sensors designed for disaster response scenarios with real-time monitoring capabilities.',
     highlights: ['Created a rover with IoT sensors for disaster response', 'Set up real‑time monitoring with reliable communication'],
     tech: ['IoT', 'Sensors', 'Real-time', 'Embedded'], emoji: '🤖',
   },
   {
-    id: 3, number: '03', title: 'AI Comm Assistant', subtitle: 'For Mute Individuals',
+    id: 3, number: '03', title: 'AI Comm Assistant', subtitle: 'July 2025 - Nov 2025 | For Mute Individuals',
     description: 'Training gesture-recognition ML models to enable inclusive communication, closing social gaps with human-centered AI technology.',
     highlights: ['Training gesture‑recognition ML models', 'Aiming to close social gaps with human‑centered AI'],
     tech: ['Machine Learning', 'Gesture Recognition', 'Python', 'AI'], emoji: '🧠',
@@ -32,7 +32,7 @@ const projects = [
     tech: ['Next.js', 'React', 'Security', 'Full-Stack'], emoji: '📝',
   },
   {
-    id: 5, number: '05', title: 'ChainFund', subtitle: 'Blockchain Fundraising Platform',
+    id: 5, number: '05', title: 'ChainFund', subtitle: 'Jan 2026 - April 2026 | Blockchain Fundraising Platform',
     link: 'https://chainfund.onrender.com',
     github: 'https://github.com/sumeetgwork-stack/chainfund',
     description: 'A blockchain-based fundraising platform with robust KYC management and admin application processing, featuring a clean, optimized interface.',
@@ -40,13 +40,13 @@ const projects = [
     tech: ['Blockchain', 'Web3', 'KYC', 'Full-Stack'], emoji: '🔗',
   },
   {
-    id: 6, number: '06', title: 'Medicare+', subtitle: 'IoT & Blockchain App',
+    id: 6, number: '06', title: 'Medicare+', subtitle: 'Jan 2026 - April 2026 | IoT & Blockchain App',
     description: 'A secure mobile application combining IoT health devices and Blockchain technology to securely track and manage patient data.',
     highlights: ['Developed a robust mobile application with a stabilized dark theme', 'Integrated IoT sensors with Blockchain data security for health monitoring'],
     tech: ['IoT', 'Blockchain', 'Flutter', 'Mobile'], emoji: '🩺',
   },
   {
-    id: 7, number: '07', title: 'Oatbites by SEJ', subtitle: 'Premium E-Commerce Platform',
+    id: 7, number: '07', title: 'Oatbites by SEJ', subtitle: 'April 2026 - June 2026 | Premium E-Commerce Platform',
     link: 'https://www.oatbites.in',
     github: 'https://github.com/sumeetgwork-stack/oatbites',
     description: 'A full-featured PWA e-commerce platform with a smart shopping cart, secure Razorpay checkout, and MongoDB-synced user data.',

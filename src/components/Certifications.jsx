@@ -10,10 +10,11 @@ const fadeUp = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }
 
 const certs = [
-  { icon: <HiShieldCheck />, title: 'Agentic AI: Learner to Builder', org: 'IBM', desc: 'Hands-on exploration of Agentic AI, moving from foundational concepts to building functional, intelligent agents.' },
-  { icon: <HiShieldCheck />, title: 'Certified Cloud Security Professional', desc: 'Expertise in cloud security controls, risk assessment, and architecture vulnerabilities.' },
-  { icon: <HiLightningBolt />, title: 'Skills4Future Workshop', org: 'Edunet Foundation', desc: 'Hands-on training on emerging technologies and industry-ready skill development.' },
-  { icon: <HiAcademicCap />, title: 'Ethical Hacking Workshop', org: 'Hactify', desc: 'Practical experience with penetration testing methods and security tooling.' },
+  { icon: <HiShieldCheck />, title: 'Agentic AI: Learner to Builder', org: 'IBM', date: 'Jul 2025 - Aug 2025', desc: 'Hands-on exploration of Agentic AI, moving from foundational concepts to building functional, intelligent agents.' },
+  { icon: <HiShieldCheck />, title: 'Certified Cloud Security Professional', date: 'Oct 2025 - Nov 2025', desc: 'Expertise in cloud security controls, risk assessment, and architecture vulnerabilities.' },
+  { icon: <HiLightningBolt />, title: 'Skills4Future Workshop', org: 'Edunet Foundation', date: 'Oct 2025', desc: 'Hands-on training on emerging technologies and industry-ready skill development.' },
+  { icon: <HiAcademicCap />, title: 'Ethical Hacking Workshop', org: 'Hactify', date: 'Dec 2025, June 2024, Dec 2023 - Jan 2024', desc: 'Practical experience with penetration testing methods and security tooling.' },
+  { icon: <HiAcademicCap />, title: 'GDG on campus GEN AI', date: 'Feb 2024', desc: 'Generative AI fundamentals.' },
 ]
 
 const Certifications = () => {
@@ -30,7 +31,9 @@ const Certifications = () => {
             <motion.div key={c.title} className="cert-card" variants={fadeUp}>
               <div className="cert-icon">{c.icon}</div>
               <h3>{c.title}</h3>
-              {c.org && <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)', letterSpacing: '1px', marginBottom: '8px' }}>{c.org}</p>}
+              <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)', letterSpacing: '1px', marginBottom: '8px' }}>
+                {c.org ? `${c.org} | ` : ''}{c.date}
+              </p>
               <p>{c.desc}</p>
             </motion.div>
           ))}
