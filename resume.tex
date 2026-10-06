@@ -1,0 +1,223 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Sumeet Gupta
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{parskip}
+
+% ---- Colors ----
+\definecolor{headingcolor}{HTML}{008080}
+\definecolor{linkcolor}{HTML}{1155CC}
+\definecolor{tableheader}{HTML}{DEEAF6}
+
+% ---- Hyperlink setup ----
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    pdfauthor={Sumeet Gupta},
+    pdftitle={Sumeet Gupta - Resume},
+}
+
+% ---- Section formatting ----
+\titleformat{\section}
+  {\bfseries\color{headingcolor}\large}
+  {}
+  {0em}
+  {}
+  [\vspace{-6pt}\textcolor{headingcolor}{\rule{\textwidth}{0.4pt}}]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% ---- Custom commands ----
+\newcommand{\projectentry}[3]{%
+  \noindent\textbf{#1}\hfill#2\\
+  \textit{#3}\vspace{2pt}
+}
+
+\newcommand{\projectentrywithlinks}[4]{%
+  \noindent\textbf{#1}~#2\hfill#3\\
+  \textit{#4}\vspace{2pt}
+}
+
+\newcommand{\workshopentry}[2]{%
+  \item #1 \hfill #2
+}
+
+% ---- Disable page numbers ----
+\pagestyle{empty}
+
+\begin{document}
+
+% ===========================================================================
+%                               HEADER
+% ===========================================================================
+\begin{center}
+  {\LARGE\bfseries\color{headingcolor} SUMEET GUPTA}\\[7pt]
+  Mumbai, India~~|~~+91 8104953424~~|~~\href{mailto:sumeetgwork@gmail.com}{sumeetgwork@gmail.com}\\[2pt]
+  \href{https://linkedin.com/in/sumeetgupta07}{linkedin.com/in/sumeetgupta07}~~|~~%
+  \href{https://github.com/sumeetgwork-stack}{github.com/sumeetgwork-stack}~~|~~%
+  \href{https://thesumeetgupta.vercel.app}{thesumeetgupta.vercel.app}
+\end{center}
+
+\vspace{-4pt}
+
+% ===========================================================================
+%                         PROFESSIONAL SUMMARY
+% ===========================================================================
+\section{PROFESSIONAL SUMMARY}
+
+Computer Science Engineering student with hands-on experience across the full project lifecycle — design, coding, testing, deployment, and documentation — for full-stack web, IoT, and blockchain applications. Skilled at gathering requirements, conducting research, and collaborating with cross-functional teams to deliver secure, standards-compliant solutions. Experienced in preparing technical documentation and system-logic reports to support compliance and transparency. Eager to contribute to a collaborative engineering team, participate in project meetings, and continuously learn new technologies.
+
+% ===========================================================================
+%                              EDUCATION
+% ===========================================================================
+\section{EDUCATION}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.2cm}|>{\centering\arraybackslash}p{3cm}|}
+  \hline
+  \rowcolor{tableheader}
+  \textbf{Course} & \textbf{Institution} & \textbf{Year of Passing} & \textbf{Percentage / CGPA} \\
+  \hline
+  Bachelor of Engineering --- Computer Science and Engineering & Xavier Institute of Engineering, Mumbai & 2027 & 8.64 (Aggregate upto Sem 6) \\
+  \hline
+  HSC (Higher Secondary Certificate) & Swami Vivekanand Jr College & 2023 & 69.50\% \\
+  \hline
+  SSC (Secondary School Certificate) & Lokmanya Tilak High School & 2021 & 93.20\% \\
+  \hline
+\end{tabularx}
+
+\vspace{4pt}
+
+% ===========================================================================
+%                           TECHNICAL SKILLS
+% ===========================================================================
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Python
+  \item HTML
+  \item CSS
+  \item SQL
+  \item Node.js
+  \item REST API
+  \item Wireshark
+  \item Android Studio
+  \item VS Code
+  \item Vercel
+\end{itemize}
+
+% ===========================================================================
+%                          TECHNICAL PROJECTS
+% ===========================================================================
+\section{TECHNICAL PROJECTS}
+
+% ---- Oatbites by SEJ ----
+\projectentrywithlinks{Oatbites by SEJ --- }%
+  {\href{https://www.oatbites.in}{www.oatbites.in}~~\href{https://github.com/sumeetgwork-stack/oatbites}{| GitHub Repo}}%
+  {April 2026 -- June 2026}%
+  {Next.js, React, MongoDB}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Designed, built, and tested a premium PWA e-commerce platform and Web Push notifications
+  \item Implemented and tested a smart shopping cart that syncs data across devices via MongoDB
+  \item Integrated Razorpay for secure checkout and Google OAuth for authentication; deployed to production on Vercel
+\end{itemize}
+
+\vspace{4pt}
+
+% ---- ChainFund ----
+\noindent\textbf{ChainFund --- }\href{https://chainfund.onrender.com}{chainfund.onrender.com}~~\href{https://github.com/sumeetgwork-stack/chainfund}{| GitHub Repo}\hfill Jan 2026 -- April 2026\\
+\textit{Blockchain, Web3}\vspace{2pt}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Gathered requirements and built a decentralized fundraising platform using Web3 technologies with transparent fund tracking
+  \item Designed and implemented KYC management and admin application-processing workflows; documented system logic for compliance and transparency
+  \item Deployed the platform to production on Render
+\end{itemize}
+
+\vspace{4pt}
+
+% ---- TestGenix ----
+\projectentrywithlinks{TestGenix --- }%
+  {\href{https://testgenix.vercel.app}{testgenix.vercel.app}~~\href{https://github.com/sumeetgwork-stack/quizify-app}{| GitHub Repo}}%
+  {}%
+  {Next.js, React, Security, Full-Stack}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Implemented strict proctoring with tab-switching detection and copy/paste prevention
+  \item Built comprehensive role-based access for Admins, Teachers, and Students
+  \item Integrated smart exam creation and PDF question parsing
+\end{itemize}
+
+\vspace{4pt}
+
+% ---- RoboRover ----
+\projectentry{RoboRover --- IoT Surveillance Rover}%
+  {Jan 2025 -- April 2025}%
+  {IoT, Sensors, Embedded Systems}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Designed and built an intelligent rover with IoT sensors for disaster response scenarios
+  \item Established real-time monitoring with reliable wireless communication protocols
+\end{itemize}
+
+% ===========================================================================
+%                     WORKSHOPS & CERTIFICATIONS
+% ===========================================================================
+\section{WORKSHOPS \& CERTIFICATIONS}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \workshopentry{Agentic AI: Learner to Builder --- IBM}{Jul 2025 -- Aug 2025}
+  \workshopentry{Certified Cloud Security Professional --- Cloud security controls}{Oct 2025 -- Nov 2025}
+  \workshopentry{Skills4Future Workshop --- Edunet Foundation}{Oct 2025}
+  \workshopentry{Ethical Hacking Workshop --- Hactify}{Dec 2025, June 2024, Dec 2023 -- Jan 2024}
+  \workshopentry{GDG on Campus GEN AI --- Generative AI fundamentals}{Feb 2024}
+\end{itemize}
+
+% ===========================================================================
+%                              STRENGTHS
+% ===========================================================================
+\section{STRENGTHS}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Analytical mindset with problem-solving ability
+  \item Team collaboration across diverse groups
+  \item Self driven learner
+\end{itemize}
+
+% ===========================================================================
+%                               HOBBIES
+% ===========================================================================
+\section{HOBBIES}
+
+\begin{itemize}[leftmargin=0.25in, itemsep=2pt, parsep=0pt, topsep=0pt]
+  \item Dance
+  \item Volleyball
+  \item Badminton
+  \item Travelling and Exploring
+\end{itemize}
+
+% ===========================================================================
+%                              LANGUAGES
+% ===========================================================================
+\section{LANGUAGES}
+
+English (Fluent)~~$\cdot$~~Hindi (Native)
+
+\end{document}
