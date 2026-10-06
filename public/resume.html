@@ -4,133 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sumeet Gupta — Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #111827;
-      --secondary: #374151;
-      --muted: #6b7280;
-      --accent: #007A7A;
-      --border: #007A7A;
+      --primary: #000000;
+      --secondary: #333333;
+      --accent: #008080;
+      --link: #1155CC;
+      --table-head: #DEEAF6;
       --bg: #ffffff;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       color: var(--primary);
       background: var(--bg);
-      line-height: 1.6;
-      font-size: 10.5pt;
+      line-height: 1.4;
+      font-size: 11pt;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
 
     .page {
-      max-width: 800px;
+      max-width: 8.5in;
       margin: 0 auto;
-      padding: 40px 48px 100px 48px;
+      padding: 0.5in; /* 0.5in margin from latex */
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      margin-bottom: 100px;
     }
 
     @page {
-      margin: 12mm 15mm; /* Adds proper physical margins to all printed pages */
-      size: A4 portrait;
+      margin: 0.5in; 
+      size: letter portrait;
     }
 
     @media print {
-      body { font-size: 9pt; }
-      .page { padding: 0; max-width: 100%; } /* Padding removed since @page handles margins */
+      body { font-size: 11pt; }
+      .page { padding: 0; max-width: 100%; box-shadow: none; margin: 0; }
       .no-print { display: none !important; }
-      
-      /* Compact spacing to ensure it fits on one page */
-      .section { margin-bottom: 12px; }
-      .header { margin-bottom: 12px; padding-bottom: 8px; }
-      .header h1 { font-size: 22pt; }
-      .header .contact-links { font-size: 6pt; gap: 2px; }
-      .summary { font-size: 9pt; line-height: 1.4; }
-      .project { margin-bottom: 10px; }
-      .project-bullets li { font-size: 9pt; line-height: 1.4; margin-bottom: 2px; }
-      .skills-grid { gap: 4px 16px; }
-      .skill-label, .skill-value { font-size: 9pt; }
-      .edu-item { margin-bottom: 4px; }
-      .edu-item .degree, .edu-item .school, .edu-item .year { font-size: 9pt; }
-      .cert-item { margin-bottom: 4px; }
-      .cert-item .cert-name, .cert-item .cert-org { font-size: 9pt; }
+      .print-bar { display: none !important; }
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
     }
 
     /* ── Header ── */
-    .header { margin-bottom: 24px; border-bottom: 2.5px solid var(--accent); padding-bottom: 16px; text-align: center; }
-    .header h1 { font-size: 26pt; font-weight: 700; letter-spacing: -0.02em; color: var(--accent); line-height: 1.1; text-transform: uppercase; }
-    .header .location { font-size: 11pt; color: var(--secondary); margin-top: 4px; margin-bottom: 8px; font-weight: 500; }
-    .header .contact-links { display: flex; justify-content: center; flex-wrap: nowrap; gap: 8px; font-size: 8.5pt; color: var(--secondary); white-space: nowrap; }
-    .header .contact-links a { color: var(--accent); text-decoration: none; }
-    .header .contact-links a:hover { text-decoration: underline; }
-    .header .contact-links span { color: var(--muted); }
+    .header { text-align: center; margin-bottom: 4px; }
+    .header h1 { font-size: 24pt; font-weight: bold; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; }
+    .header .contact-info { font-size: 11pt; margin-bottom: 2px; }
+    .header .contact-links { font-size: 11pt; }
+    .header .contact-links a { color: var(--link); }
 
     /* ── Section ── */
-    .section { margin-bottom: 20px; }
+    .section { margin-top: 12px; margin-bottom: 6px; }
     .section-title {
-      font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px;
-      color: var(--accent); margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 4px;
+      font-size: 13pt; font-weight: bold; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2px; border-bottom: 1px solid var(--accent); padding-bottom: 2px;
     }
 
     /* ── Summary ── */
-    .summary { font-size: 10pt; color: var(--secondary); line-height: 1.7; }
+    .summary { font-size: 11pt; text-align: justify; margin-top: 6px; }
 
-    /* ── Education ── */
-    .edu-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
-    .edu-item .degree { font-weight: 600; font-size: 10.5pt; }
-    .edu-item .school { color: var(--secondary); font-size: 9.5pt; }
-    .edu-item .year { font-size: 9pt; color: var(--muted); white-space: nowrap; }
+    /* ── Education Table ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      font-size: 11pt;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 6px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--table-head);
+      font-weight: bold;
+    }
+    .text-center { text-align: center; }
 
-    /* ── Skills ── */
-    .skills-grid { display: grid; grid-template-columns: 120px 1fr; gap: 6px 16px; }
-    .skill-label { font-weight: 600; font-size: 9.5pt; color: var(--primary); }
-    .skill-value { font-size: 9.5pt; color: var(--secondary); }
+    /* ── Lists ── */
+    ul {
+      margin-top: 2px;
+      margin-bottom: 4px;
+      padding-left: 0.25in;
+    }
+    li {
+      margin-bottom: 2px;
+    }
 
     /* ── Projects ── */
-    .project { margin-bottom: 14px; }
+    .project { margin-top: 6px; }
     .project-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .project-title { font-weight: 600; font-size: 10.5pt; }
-    .project-subtitle { font-size: 9pt; color: var(--muted); font-style: italic; }
-    .project-tech { font-size: 8.5pt; color: var(--accent); margin-top: 1px; }
-    .project-bullets { padding-left: 18px; margin-top: 3px; }
-    .project-bullets li { font-size: 9.5pt; color: var(--secondary); margin-bottom: 2px; }
+    .project-title { font-weight: bold; }
+    .project-subtitle { font-style: italic; margin-bottom: 2px; }
 
     /* ── Certifications ── */
-    .cert-item { margin-bottom: 6px; }
-    .cert-item .cert-name { font-weight: 600; font-size: 10pt; }
-    .cert-item .cert-org { font-size: 9pt; color: var(--muted); }
+    .cert-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+    
+    .cert-ul {
+        list-style-type: disc;
+    }
 
     /* ── Print Button ── */
     .print-bar {
-      position: fixed; bottom: 0; left: 0; right: 0; background: var(--primary);
+      position: fixed; bottom: 0; left: 0; right: 0; background: #111827;
       padding: 14px 24px; display: flex; justify-content: center; gap: 16px; z-index: 100;
+      font-family: 'Inter', sans-serif;
     }
     .print-bar button {
       background: var(--accent); color: #fff; border: none; padding: 10px 28px;
-      border-radius: 8px; font-size: 10pt; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif;
+      border-radius: 8px; font-size: 10pt; font-weight: 600; cursor: pointer;
     }
     .print-bar button:hover { filter: brightness(1.15); }
     .print-bar span { color: #aaa; font-size: 9pt; display: flex; align-items: center; }
-
-    /* ── Mobile Optimization ── */
+    
     @media screen and (max-width: 640px) {
-      .page { padding: 24px 20px 120px 20px; }
-      .header h1 { font-size: 20pt; }
-      .header .location { font-size: 10pt; }
-      .header .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; font-size: 8pt; white-space: normal; }
-      .header .contact-links span { display: none; } /* Hide bullets on mobile grid */
-      .skills-grid { grid-template-columns: 1fr; gap: 2px 0; margin-bottom: 8px; }
-      .skill-label { font-size: 10pt; margin-top: 6px; }
-      .skill-value { font-size: 9.5pt; }
-      .edu-item { flex-direction: column; align-items: flex-start; }
-      .edu-item .year { margin-top: 2px; font-size: 8.5pt; }
-      .project-header { flex-direction: column; align-items: flex-start; }
-      .project-subtitle { margin-top: 2px; font-size: 8.5pt; }
-      .print-bar { padding: 16px; flex-direction: row; }
-      .print-bar span { display: none; } /* Hide the 'Ctrl+P' text on mobile */
+      .header .contact-info, .header .contact-links { font-size: 9pt; }
+      table { font-size: 9pt; }
+      .project-header { flex-direction: column; }
     }
   </style>
 </head>
@@ -140,105 +143,112 @@
 
   <!-- ════════ HEADER ════════ -->
   <div class="header">
-    <h1>Sumeet Gupta</h1>
-    <div class="location">Mumbai, India | +91 8104953424</div>
+    <h1>SUMEET GUPTA</h1>
+    <div class="contact-info">
+      Mumbai, India &nbsp;|&nbsp; +91 8104953424 &nbsp;|&nbsp; <a href="mailto:sumeetgwork@gmail.com">sumeetgwork@gmail.com</a>
+    </div>
     <div class="contact-links">
-      <a href="mailto:sumeetgwork@gmail.com">sumeetgwork@gmail.com</a>
-      <span>•</span>
-      <a href="https://linkedin.com/in/sumeetgupta07" target="_blank">linkedin.com/in/sumeetgupta07</a>
-      <span>•</span>
-      <a href="https://github.com/sumeetgwork-stack" target="_blank">github.com/sumeetgwork-stack</a>
-      <span>•</span>
+      <a href="https://linkedin.com/in/sumeetgupta07" target="_blank">linkedin.com/in/sumeetgupta07</a> &nbsp;|&nbsp; 
+      <a href="https://github.com/sumeetgwork-stack" target="_blank">github.com/sumeetgwork-stack</a> &nbsp;|&nbsp; 
       <a href="https://thesumeetgupta.vercel.app" target="_blank">thesumeetgupta.vercel.app</a>
     </div>
   </div>
 
   <!-- ════════ SUMMARY ════════ -->
   <div class="section">
-    <div class="section-title">Professional Summary</div>
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
     <p class="summary">
-      Passionate Computer Science Engineering student at Xavier Institute of Engineering with hands-on experience building full-stack web applications, IoT systems, and AI-powered solutions. Proficient in React, JavaScript, Python, and embedded systems. Proven ability to deliver end-to-end projects — from 3D e-commerce platforms and blockchain fundraising tools to IoT surveillance rovers for disaster response. Eager to contribute to innovative teams and solve real-world problems through technology.
+      Computer Science Engineering student with hands-on experience across the full project lifecycle — design, coding, testing, deployment, and documentation — for full-stack web, IoT, and blockchain applications. Skilled at gathering requirements, conducting research, and collaborating with cross-functional teams to deliver secure, standards-compliant solutions. Experienced in preparing technical documentation and system-logic reports to support compliance and transparency. Eager to contribute to a collaborative engineering team, participate in project meetings, and continuously learn new technologies.
     </p>
   </div>
 
   <!-- ════════ EDUCATION ════════ -->
   <div class="section">
-    <div class="section-title">Education</div>
-    <div class="edu-item">
-      <div>
-        <div class="degree">Bachelor of Engineering — Computer Science and Engineering</div>
-        <div class="school">Xavier Institute of Engineering, Mumbai</div>
-      </div>
-      <div class="year">2023 — 2027</div>
-    </div>
-    <div class="edu-item">
-      <div>
-        <div class="degree">HSC (Higher Secondary Certificate)</div>
-        <div class="school">Swami Vivekanand Jr College</div>
-      </div>
-      <div class="year">2021 — 2023</div>
-    </div>
-    <div class="edu-item">
-      <div>
-        <div class="degree">SSC (Secondary School Certificate)</div>
-        <div class="school">Lokmanya Tilak High School</div>
-      </div>
-      <div class="year">2011 — 2021</div>
-    </div>
+    <div class="section-title">EDUCATION</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Institution</th>
+          <th class="text-center">Year of Passing</th>
+          <th class="text-center">Percentage / CGPA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bachelor of Engineering — Computer Science and Engineering</td>
+          <td>Xavier Institute of Engineering, Mumbai</td>
+          <td class="text-center">2027</td>
+          <td class="text-center">8.64 (Aggregate upto Sem 6)</td>
+        </tr>
+        <tr>
+          <td>HSC (Higher Secondary Certificate)</td>
+          <td>Swami Vivekanand Jr College</td>
+          <td class="text-center">2023</td>
+          <td class="text-center">69.50%</td>
+        </tr>
+        <tr>
+          <td>SSC (Secondary School Certificate)</td>
+          <td>Lokmanya Tilak High School</td>
+          <td class="text-center">2021</td>
+          <td class="text-center">93.20%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <!-- ════════ SKILLS ════════ -->
+  <!-- ════════ TECHNICAL SKILLS ════════ -->
   <div class="section">
-    <div class="section-title">Technical Skills</div>
-    <div class="skills-grid">
-      <div class="skill-label">Languages</div>
-      <div class="skill-value">JavaScript, Python, Java, C, HTML, CSS</div>
-      <div class="skill-label">Frontend</div>
-      <div class="skill-value">React, Tailwind CSS, Framer Motion, Three.js, Responsive Design</div>
-      <div class="skill-label">Backend</div>
-      <div class="skill-value">Node.js, REST APIs, Database Design, Authentication</div>
-      <div class="skill-label">Blockchain</div>
-      <div class="skill-value">Web3, Smart Contracts, KYC Systems, Decentralized Applications</div>
-      <div class="skill-label">Security</div>
-      <div class="skill-value">Ethical Hacking, Penetration Testing</div>
-      <div class="skill-label">Tools</div>
-      <div class="skill-value">GitHub, Vercel, VS Code, Android Studio</div>
-    </div>
+    <div class="section-title">TECHNICAL SKILLS</div>
+    <ul class="cert-ul">
+      <li>Python</li>
+      <li>HTML, CSS, C++</li>
+      <li>SQL</li>
+      <li>Node.js</li>
+      <li>REST API</li>
+      <li>Wireshark</li>
+      <li>VS Code, Android Studio</li>
+      <li>Vercel</li>
+    </ul>
   </div>
 
-  <!-- ════════ PROJECTS ════════ -->
+  <!-- ════════ TECHNICAL PROJECTS ════════ -->
   <div class="section">
-    <div class="section-title">Technical Projects</div>
+    <div class="section-title">TECHNICAL PROJECTS</div>
 
     <div class="project">
       <div class="project-header">
-        <span class="project-title">Oatbites by SEJ — <a href="https://www.oatbites.in" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">www.oatbites.in</a> | <a href="https://github.com/sumeetgwork-stack/oatbites" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">GitHub Repo</a></span>
-        <span class="project-subtitle">April 2026 - June 2026 | Next.js, React, MongoDB</span>
+        <span class="project-title">Oatbites by SEJ — <a href="https://www.oatbites.in" target="_blank">www.oatbites.in</a> <a href="https://github.com/sumeetgwork-stack/oatbites" target="_blank">| GitHub Repo</a></span>
+        <span>April 2026 – June 2026</span>
       </div>
-      <ul class="project-bullets">
-        <li>Built a premium PWA e-commerce platform with offline support and Web Push notifications</li>
-        <li>Implemented a smart shopping cart that syncs data across devices via MongoDB</li>
-        <li>Integrated Razorpay for secure checkout and Google OAuth for user authentication</li>
+      <div class="project-subtitle">Next.js, React, MongoDB</div>
+      <ul>
+        <li>Designed, built, and tested a premium PWA e-commerce platform and Web Push notifications</li>
+        <li>Implemented and tested a smart shopping cart that syncs data across devices via MongoDB</li>
+        <li>Integrated Razorpay for secure checkout and Google OAuth for authentication; deployed to production on Vercel</li>
       </ul>
     </div>
 
     <div class="project">
       <div class="project-header">
-        <span class="project-title">ChainFund — <a href="https://chainfund.onrender.com" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">chainfund.onrender.com</a> | <a href="https://github.com/sumeetgwork-stack/chainfund" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">GitHub Repo</a></span>
-        <span class="project-subtitle">Jan 2026 - April 2026 | Blockchain, Web3</span>
+        <span class="project-title">ChainFund — <a href="https://chainfund.onrender.com" target="_blank">chainfund.onrender.com</a> <a href="https://github.com/sumeetgwork-stack/chainfund" target="_blank">| GitHub Repo</a></span>
+        <span>Jan 2026 – April 2026</span>
       </div>
-      <ul class="project-bullets">
-        <li>Built a decentralized fundraising platform using Web3 technologies with transparent fund tracking</li>
-        <li>Implemented comprehensive KYC management and admin application processing logic</li>
+      <div class="project-subtitle">Blockchain, Web3</div>
+      <ul>
+        <li>Gathered requirements and built a decentralized fundraising platform using Web3 technologies with transparent fund tracking</li>
+        <li>Designed and implemented KYC management and admin application-processing workflows; documented system logic for compliance and transparency</li>
+        <li>Deployed the platform to production on Render</li>
       </ul>
     </div>
 
     <div class="project">
       <div class="project-header">
-        <span class="project-title">TestGenix — <a href="https://testgenix.vercel.app" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">testgenix.vercel.app</a> | <a href="https://github.com/sumeetgwork-stack/quizify-app" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">GitHub Repo</a></span>
-        <span class="project-subtitle">Next.js, React, Security, Full-Stack</span>
+        <span class="project-title">TestGenix — <a href="https://testgenix.vercel.app" target="_blank">testgenix.vercel.app</a> <a href="https://github.com/sumeetgwork-stack/quizify-app" target="_blank">| GitHub Repo</a></span>
+        <span></span>
       </div>
-      <ul class="project-bullets">
+      <div class="project-subtitle">Next.js, React, Security, Full-Stack</div>
+      <ul>
         <li>Implemented strict proctoring with tab-switching detection and copy/paste prevention</li>
         <li>Built comprehensive role-based access for Admins, Teachers, and Students</li>
         <li>Integrated smart exam creation and PDF question parsing</li>
@@ -248,64 +258,86 @@
     <div class="project">
       <div class="project-header">
         <span class="project-title">RoboRover — IoT Surveillance Rover</span>
-        <span class="project-subtitle">Jan 2025 - April 2025 | IoT, Sensors</span>
+        <span>Jan 2025 – April 2025</span>
       </div>
-      <ul class="project-bullets">
+      <div class="project-subtitle">IoT, Sensors, Embedded Systems</div>
+      <ul>
         <li>Designed and built an intelligent rover with IoT sensors for disaster response scenarios</li>
         <li>Established real-time monitoring with reliable wireless communication protocols</li>
       </ul>
     </div>
-
-    <div class="project">
-      <div class="project-header">
-        <span class="project-title">AI Communication Assistant — For Mute Individuals</span>
-        <span class="project-subtitle">July 2025 - Nov 2025 | Machine Learning, AI</span>
-      </div>
-      <ul class="project-bullets">
-        <li>Training gesture-recognition ML models to enable inclusive communication for mute individuals</li>
-        <li>Applying human-centered AI principles to close social accessibility gaps</li>
-      </ul>
-    </div>
   </div>
 
-  <!-- ════════ CERTIFICATIONS ════════ -->
+  <!-- ════════ WORKSHOPS & CERTIFICATIONS ════════ -->
   <div class="section">
-    <div class="section-title">Workshops & Certifications</div>
-    <div class="cert-item">
-      <span class="cert-name"><a href="https://drive.google.com/file/d/1XSIjQZvnaXKw_slMxxxyjglnEe48LAb1/view?usp=drive_link" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">Agentic AI: Learner to Builder</a></span>
-      <span class="cert-org"> — IBM (Jul 2025 - Aug 2025)</span>
-    </div>
-    <div class="cert-item">
-      <span class="cert-name"><a href="https://drive.google.com/file/d/17eYzXJOa5U4XvXRf0peqood6XRmOSb-m/view?usp=drive_link" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">Certified Cloud Security Professional</a></span>
-      <span class="cert-org"> — Cloud security controls (Oct 2025 - Nov 2025)</span>
-    </div>
-    <div class="cert-item">
-      <span class="cert-name"><a href="https://drive.google.com/file/d/1REx0UndP9fA4CboejpArzyt8-JprRXRN/view?usp=drive_link" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">Skills4Future Workshop</a></span>
-      <span class="cert-org"> — Edunet Foundation (Oct 2025)</span>
-    </div>
-    <div class="cert-item">
-      <span class="cert-name"><a href="https://drive.google.com/file/d/1VAeAVyJKkihJ3PvTfTh3faIIWNbbWeHR/view?usp=drive_link" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">Ethical Hacking Workshop</a></span>
-      <span class="cert-org"> — Hactify (Dec 2025, June 2024, Dec 2023 - Jan 2024)</span>
-    </div>
-    <div class="cert-item">
-      <span class="cert-name"><a href="https://drive.google.com/file/d/1SKvhAn-2QOxka4qaKNSiwQNw12idPGJF/view?usp=drive_link" target="_blank" style="color: inherit; text-decoration: underline; text-decoration-color: var(--accent);">GDG on campus GEN AI</a></span>
-      <span class="cert-org"> — Generative AI fundamentals (Feb 2024)</span>
-    </div>
+    <div class="section-title">WORKSHOPS & CERTIFICATIONS</div>
+    <ul class="cert-ul">
+      <li>
+        <div class="cert-item">
+          <span><a href="https://drive.google.com/file/d/1XSIjQZvnaXKw_slMxxxyjglnEe48LAb1/view?usp=drive_link" target="_blank">Agentic AI: Learner to Builder</a> — IBM</span>
+          <span>Jul 2025 – Aug 2025</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-item">
+          <span><a href="https://drive.google.com/file/d/17eYzXJOa5U4XvXRf0peqood6XRmOSb-m/view?usp=drive_link" target="_blank">Certified Cloud Security Professional</a> — Cloud security controls</span>
+          <span>Oct 2025 – Nov 2025</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-item">
+          <span><a href="https://drive.google.com/file/d/1REx0UndP9fA4CboejpArzyt8-JprRXRN/view?usp=drive_link" target="_blank">Skills4Future Workshop</a> — Edunet Foundation</span>
+          <span>Oct 2025</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-item">
+          <span><a href="https://drive.google.com/file/d/1VAeAVyJKkihJ3PvTfTh3faIIWNbbWeHR/view?usp=drive_link" target="_blank">Ethical Hacking Workshop</a> — Hactify</span>
+          <span>Dec 2025, June 2024, Dec 2023 – Jan 2024</span>
+        </div>
+      </li>
+      <li>
+        <div class="cert-item">
+          <span><a href="https://drive.google.com/file/d/1SKvhAn-2QOxka4qaKNSiwQNw12idPGJF/view?usp=drive_link" target="_blank">GDG on Campus GEN AI</a> — Generative AI fundamentals</span>
+          <span>Feb 2024</span>
+        </div>
+      </li>
+    </ul>
   </div>
 
+  <!-- ════════ STRENGTHS ════════ -->
+  <div class="section">
+    <div class="section-title">STRENGTHS</div>
+    <ul class="cert-ul">
+      <li>Analytical mindset with problem-solving ability</li>
+      <li>Team collaboration across diverse groups</li>
+      <li>Self driven learner</li>
+    </ul>
+  </div>
+
+  <!-- ════════ HOBBIES ════════ -->
+  <div class="section">
+    <div class="section-title">HOBBIES</div>
+    <ul class="cert-ul">
+      <li>Dance</li>
+      <li>Volleyball</li>
+      <li>Badminton</li>
+      <li>Travelling and Exploring</li>
+    </ul>
+  </div>
 
   <!-- ════════ LANGUAGES ════════ -->
   <div class="section">
-    <div class="section-title">Languages</div>
-    <p class="summary">English (Fluent) · Hindi (Native)</p>
+    <div class="section-title">LANGUAGES</div>
+    <p>English (Fluent) &nbsp;·&nbsp; Hindi (Native)</p>
   </div>
 
 </div>
 
 <!-- ════════ PRINT BAR ════════ -->
 <div class="print-bar no-print">
-  <span>Press Ctrl+P or click →</span>
-  <button onclick="window.print()">📄 Save as PDF</button>
+  <span>(Press Ctrl+P or Cmd+P to save as PDF directly from browser)</span>
+  <button onclick="window.print()">Save as PDF</button>
 </div>
 
 </body>
